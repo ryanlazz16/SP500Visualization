@@ -1,5 +1,3 @@
-//const apiKey = "R1TE9XCC432MADLL";
-
 var priceDict = {};
 
 function drawChart(ticker) {
