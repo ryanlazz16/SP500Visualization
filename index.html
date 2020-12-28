@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Final Project: Stock Market Analysis </title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+    </head>
+
+    <body>
+        <div class="topContainer">
+            <svg class="treeMap" />
+        </div>
+
+        <svg id="candlestickChart"/>
+
+        <div class="middleContainer">
+            <input type='checkbox' id='Average_Total_Volume' checked><font size='2'>Average Total Volume</font>
+            <input type='checkbox' id='Market_Capitalization' checked><font size='2'>Market Capitalization</font>
+            <input type='checkbox' id='Week_52_High' checked><font size='2'>52 Week High</font>
+            <input type='checkbox' id='Week_52_Low' checked><font size='2'>52 Week Low</font>
+            <input type='checkbox' id='Percent_Change' checked><font size='2'>Percent Change</font>
+            <input type='checkbox' id='Latest_Price' checked><font size='2'>Latest Price</font>
+            <input type='checkbox' id='Volume' checked><font size='2'>Volume</font>
+            <input type='checkbox' id='PE' checked><font size='2'>P/E Ratio</font>
+            <input type='button' id='Update' onclick='redraw();' src='treeMap.js' value='Update' />
+            <svg class="parallelCoordinatesChart" />
+        </div>
+
+        <svg id="differenceChart"/>
+
+        <div id="tooltip" class="hidden">
+            <p><span id="Date"></span></p>
+            <p><span id="Stock"></span></p>
+            <p><span id="Open"></span></p>
+            <p><span id="High"></span></p>
+            <p><span id="Low"></span></p>
+            <p><span id="Close"></span></p>
+            <p><span id="ticker1"></span></p>
+            <p><span id="ticker2"></span></p>
+            <p><span id="Exchange"></span></p>
+            <p><span id="CompName"></span></p>
+            <p><span id="MarketCap"></span></p>
+            <p><span id="SectorName"></span></p>
+            <p><span id="TotalMarketCap"></span></p>
+        </div>
+  </body>
+
+
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="./scripts/d3.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/treeMap.js"></script>
+    <script src="./scripts/differenceChart.js"></script>
+    <script src="./scripts/parallelCoordinatesChart.js"></script>
+    <script src="./scripts/candlestickChart.js"></script>
+</html>
